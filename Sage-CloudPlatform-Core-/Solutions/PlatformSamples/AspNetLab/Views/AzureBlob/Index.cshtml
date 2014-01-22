@@ -1,0 +1,27 @@
+﻿@using AspNetLab.Helpers
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<p><b>Blob Test</b></p>
+<div>
+    @if (ViewBag.IsUploaded == null || !ViewBag.IsUploaded)
+    {
+        @Html.Partial("Partials/_UploadFile")
+        if (ViewBag.HasUploadError != null && ViewBag.HasUploadError == true)
+        {
+            @Html.Partial("Partials/_UploadError")
+        }
+        if (ViewBag.IsDeleted != null)
+        {
+            @(ViewBag.IsDeleted == true ? Html.Partial("Partials/_ShowDeleteSuccess") : Html.Partial("Partials/_ShowDeleteError"))
+        }
+    }
+    else if (ViewBag.IsUploaded == true)
+    {
+        @Html.Partial("Partials/_DownloadFile")        
+    }
+</div>
+
+@Html.MarkDown("AzureBlob_Index")

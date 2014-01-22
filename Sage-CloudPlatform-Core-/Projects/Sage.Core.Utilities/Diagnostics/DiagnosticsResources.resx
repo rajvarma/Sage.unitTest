@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboveMaximumIntErrorFormat" xml:space="preserve">
+    <value>Invalid value passed to {0}. The maximum value of {1} is {2}</value>
+  </data>
+  <data name="AssemblyTraceLevelSwitch" xml:space="preserve">
+    <value>The assembly-level error, warning, info, verbose trace switch.</value>
+  </data>
+  <data name="AssertionFailed" xml:space="preserve">
+    <value>ASSERTION FAILED!</value>
+  </data>
+  <data name="AssertionFailed2Format" xml:space="preserve">
+    <value>ASSERTION FAILED:  {0}</value>
+  </data>
+  <data name="AssertionFailedFormat" xml:space="preserve">
+    <value>ASSERTION FAILED:  {0}</value>
+  </data>
+  <data name="AttachToDebuggerMessage" xml:space="preserve">
+    <value>Attach process to the debugger.  Maybe you'll get lucky...</value>
+  </data>
+  <data name="AttributeNotFoundInFormat" xml:space="preserve">
+    <value>Attribute '{0}' not found in '{1}'.</value>
+  </data>
+  <data name="BelowMinimumIntErrorFormat" xml:space="preserve">
+    <value>Invalid value passed to {0}. The minimum value of {1} is {2}</value>
+  </data>
+  <data name="CallerNotAuthorized" xml:space="preserve">
+    <value>Caller not authorized.</value>
+  </data>
+  <data name="CanNotFindMscorelibError" xml:space="preserve">
+    <value>Cannot determine the location of MSCORLIB.DLL</value>
+  </data>
+  <data name="DirectoryDoesNotExistErrorFormat" xml:space="preserve">
+    <value>The directory {0} does not exist</value>
+  </data>
+  <data name="EmptyArrayErrorFormat" xml:space="preserve">
+    <value>An empty {0} array was passed to {1}</value>
+  </data>
+  <data name="EmptyListErrorFormat" xml:space="preserve">
+    <value>An empty {0} list was passed to {1}</value>
+  </data>
+  <data name="EmptyOrNullArgumentNamePassedToArgumentValidator" xml:space="preserve">
+    <value>An empty or null argument name was passed to the ArgumentValidator</value>
+  </data>
+  <data name="EmptyOrNullSourcePassedToArgumentValidator" xml:space="preserve">
+    <value>An empty or null source was passed to the ArgumentValidator</value>
+  </data>
+  <data name="EmptyStringErrorFormat" xml:space="preserve">
+    <value>An empty {0} string was passed to {1}</value>
+  </data>
+  <data name="ErrorWritingToCustomEventLogFormat" xml:space="preserve">
+    <value>Error writing to the {0} custom event log.\n\nError Details: {1}\n\nOriginal Error: {2}</value>
+  </data>
+  <data name="EventLogSourceDoesNotExist" xml:space="preserve">
+    <value>Event Log Source does not exist: {0}</value>
+  </data>
+  <data name="ExceptionBeingReportedAt" xml:space="preserve">
+    <value>Exception being reported at:</value>
+  </data>
+  <data name="ExceptionMessageFormatterFormat" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="ExceptionMessageSeparatorFormat" xml:space="preserve">
+    <value>:{0}</value>
+  </data>
+  <data name="ExLogHeaderFormat" xml:space="preserve">
+    <value>An exception is being logged for diagnostic purposes. It is possible for exceptions to be logged during the normal operation of the software. Exceptions are included in increasing order of specificity.{0}{0}</value>
+  </data>
+  <data name="ExLogMessageFormat" xml:space="preserve">
+    <value>*********************************************{0}{0}Exception Source: {1}{0}Exception Message:{0}{0}{2}{0}</value>
+  </data>
+  <data name="ExLogTraceFormat" xml:space="preserve">
+    <value>Exception Stack Trace:{0}{0}{1}{0}</value>
+  </data>
+  <data name="FailedToParseConfigDataFormat" xml:space="preserve">
+    <value>Failed to parse config data in: '{0}'</value>
+  </data>
+  <data name="FailedToSetupFileSystemWatcherErrorFormat" xml:space="preserve">
+    <value>Failed to setup FileSystemWatcher on config file: '{0}'</value>
+  </data>
+  <data name="FileDoesNotExistErrorFormat" xml:space="preserve">
+    <value>The file {0} does not exist</value>
+  </data>
+  <data name="FileOrDirectoryNotFoundExceptionContent" xml:space="preserve">
+    <value>Make sure that you selected the correct path and try again.</value>
+  </data>
+  <data name="FormatExceptionFailureOccurredDuringOutputTraceFormat" xml:space="preserve">
+    <value>FormatException failure occurred during output trace message '{0}'</value>
+  </data>
+  <data name="HandledTheFollowingExceptionFormat" xml:space="preserve">
+    <value>{0} handled the following exception</value>
+  </data>
+  <data name="InterfaceExpectedErrorFormat" xml:space="preserve">
+    <value>An type that is not an interface '{0}' was passed to {1}</value>
+  </data>
+  <data name="InvalidArrayLengthErrorFormat" xml:space="preserve">
+    <value>An {0} array was passed to {1} which had an unexpected number of elements (expected number of elements was {3}, received {2}).</value>
+  </data>
+  <data name="InvalidRegExpresionErrorFormat" xml:space="preserve">
+    <value>Invalid value passed to {0}.  The value of the {1} string argument ('{2}') string does not match the condition : {3}.</value>
+  </data>
+  <data name="InvalidStateTraceLoggingIsAlreadyDisabled" xml:space="preserve">
+    <value>Invalid state.  Trace logging is already disabled.</value>
+  </data>
+  <data name="InvalidStateTraceLoggingIsAlreadyEnabled" xml:space="preserve">
+    <value>Invalid state.  Trace logging is already enabled.</value>
+  </data>
+  <data name="MaximumStringLengthErrorFormat" xml:space="preserve">
+    <value>An invalid {0} was passed to {1}. The maximum length of {0} is {2}</value>
+  </data>
+  <data name="InvalidTypeErrorFormat" xml:space="preserve">
+    <value>An object of an unexpected type '{0}' was passed to {1} (expected type was '{2}')</value>
+  </data>
+  <data name="InvalidUriErrorFormat" xml:space="preserve">
+    <value>An invalid value was passed to {0}.  The value of the {1} string argument ('{2}') must represent an absolute-path Uri.</value>
+  </data>
+  <data name="InvalidUriStringErrorFormat" xml:space="preserve">
+    <value>An invalid value was passed to {0}.  The value of the {1} string argument ('{2}') could not be used to construct a valid Uri.</value>
+  </data>
+  <data name="InvalidValueForEnumTypeFormat" xml:space="preserve">
+    <value>Invalid value '{0}' for enum type '{1}'.</value>
+  </data>
+  <data name="MissingAssemblyConfigFileVersionError" xml:space="preserve">
+    <value>Assembly does not have the AssemblyConfigurationFileVersion attribute.</value>
+  </data>
+  <data name="NullIntPtrError" xml:space="preserve">
+    <value>A null {0} was passed to {1}</value>
+  </data>
+  <data name="NullReferenceErrorFormat" xml:space="preserve">
+    <value>A null {0} reference was passed to {1}</value>
+  </data>
+  <data name="PathTooLongExceptionContent" xml:space="preserve">
+    <value>Select a shorter path or type a shorter file name.</value>
+  </data>
+  <data name="StackTrace" xml:space="preserve">
+    <value>Stack Trace:</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>{1}</value>
+  </data>
+  <data name="UnexpectedTypeErrorFormat" xml:space="preserve">
+    <value>An object of an unexpected type '{0}' was passed to {1} (expected type was a subclass of '{2}')</value>
+  </data>
+  <data name="UnhandledExceptionErrorFormat" xml:space="preserve">
+    <value>{0} encountered an exception that it could not handle</value>
+  </data>
+  <data name="MinimumStringLengthErrorFormat" xml:space="preserve">
+    <value>An invalid {0} was passed to {1}. The minimum length of {0} is {2}</value>
+  </data>
+  <data name="NoMatchRegExMessage" xml:space="preserve">
+    <value>The specified regular expression {0} does not match (with options={1}).</value>
+  </data>
+  <data name="AboveMaximumContentErrorFormat" xml:space="preserve">
+    <value>Invalid value passed to {0}. The maximum value of {1} is {2} MB.</value>
+  </data>
+</root>

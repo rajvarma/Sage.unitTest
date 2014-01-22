@@ -1,0 +1,6 @@
+﻿<p>Enter you name</p>
+@using (Html.BeginForm("SetCache", "AzureCache"))
+{
+    @Html.TextBox("txtName")
+    <input id="SubmitName" type="submit" value="Go" />
+}

@@ -1,0 +1,23 @@
+﻿@using AspNetLab.Helpers
+@{
+    ViewBag.Title = "Index";
+}
+@Html.MarkDown("AzureCache_Index")
+<p><b>Cache Test</b></p>
+<div>
+    @if (ViewBag.IsSaved == null || !ViewBag.IsSaved)
+    {
+        @Html.Partial("Partials/_AddCache")
+    }
+    else if (ViewBag.IsSaved == true)
+    {
+        if (ViewBag.CachedValue == null)
+        {
+            @Html.Partial("Partials/_ShowSaveSuccess")
+        }
+        else
+        {
+            @Html.Partial("Partials/_GetCache")
+        }
+    }
+</div>

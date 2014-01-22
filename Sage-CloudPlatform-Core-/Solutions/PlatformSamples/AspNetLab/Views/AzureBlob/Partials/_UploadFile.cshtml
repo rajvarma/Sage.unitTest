@@ -1,0 +1,27 @@
+﻿
+@if (ViewBag.IsVersion != null && ViewBag.IsVersion == true)
+{
+    using (Html.BeginForm("UploadVersion", "AzureBlob", FormMethod.Post, new {@id = "frmUpload", @enctype = "multipart/form-data"}))
+    {
+        <p>
+            Upload a file 
+            <input id="Upload" type="file" name="Upload" />
+    <br />
+            <button type="submit" id="UploadFile">Upload</button>
+
+        </p>
+    }
+}
+else
+{
+    using (Html.BeginForm("Upload", "AzureBlob", FormMethod.Post, new {@id = "frmUpload", @enctype = "multipart/form-data"}))
+    {
+        <p>
+            Upload a file 
+            <input id="Upload" type="file" name="Upload" />
+    <br />
+            <button type="submit" id="UploadFile">Upload</button>
+
+        </p>
+    }
+}

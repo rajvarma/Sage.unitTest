@@ -1,0 +1,68 @@
+﻿
+@{
+    var uniqueFileName = @ViewBag.UniqueFileName;
+    var fileName = @ViewBag.FileName;
+}
+<div id="versionList">
+    <fieldset>
+<legend>Older Versions</legend>        
+    @using AspNetLab.Models    @model VersionModel
+    @using (Html.BeginForm("DownloadVersion", "AzureBlob", FormMethod.Post, new { @id = "frmDownload", @enctype = "multipart/form-data" }))
+    {
+        @Html.Hidden(Model.FileName)
+        @Html.Hidden("uniqueFileName")
+        @Html.Hidden("fileName")
+        for (int index = 0; index < Model.VersionInfos.Count; index++)
+        {
+          
+            <p>Download @ViewBag.FileName version @Html.DisplayFor(x=>x.VersionInfos[index].VersionNumber)
+                <input class="downloadFile" type="submit" value="Download" data-VersionNumber="@Model.VersionInfos[index].VersionNumber" /></p>
+        }
+    }
+    @using (Html.BeginForm("DeleteVersion", "AzureBlob", FormMethod.Post, new { @id = "frmDelete", @enctype = "multipart/form-data" }))
+    {
+        @Html.Hidden("uniqueFileName")
+        @Html.Hidden("fileName")
+        for (int index = 0; index < Model.VersionInfos.Count; index++)
+        {
+            <p>Delete @ViewBag.FileName  @Html.DisplayFor(x=>x.VersionInfos[index].VersionNumber)
+                <input class="deleteFile" type="submit" value="Delete" data-VersionNumber="@Model.VersionInfos[index].VersionNumber" /></p>
+
+        }
+    }
+    </fieldset>
+   
+
+</div>
+
+<script>
+    $(function () {
+        $('#versionList').on('click', '.downloadFile', function (e) {
+            e.preventDefault();
+            var versioNum = $(this).attr('data-VersionNumber');
+            $('<input />').attr('type', 'hidden')
+            .attr('id', 'versionNumber')
+             .attr('name', 'versionNumber')
+             .attr('value', versioNum)
+             .appendTo('#frmDownload');
+            $('#frmDownload').submit();
+            $('#frmDownload').find('input[id="versionNumber"]').remove();
+        });
+        
+        $('#versionList').on('click', '.deleteFile', function (e) {
+            e.preventDefault();
+            var versioNum = $(this).attr('data-VersionNumber');
+            $('<input />').attr('type', 'hidden')
+            .attr('id', 'versionNumber')
+             .attr('name', 'versionNumber')
+             .attr('value',versioNum)
+             .appendTo('#frmDelete');
+            $('#frmDelete').submit();
+            $('#frmDelete').find('input[id="versionNumber"]').remove();
+        });
+    });
+
+</script>
+
+
+

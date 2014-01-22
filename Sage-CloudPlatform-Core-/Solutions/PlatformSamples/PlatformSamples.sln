@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "Sage.Labs", "..\..\Samples\Sage.Labs\Sage.Labs.ccproj", "{7F3B286B-F931-40F4-A1D5-3C468A1BB7EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetLab", "AspNetLab\AspNetLab.csproj", "{B8870C98-A724-4A39-A93C-C8E13CB93165}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerLab", "WorkerLab\WorkerLab.csproj", "{9F735F9E-35E0-4B3A-83AC-C4A91AE0F787}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoreProjects", "CoreProjects", "{F3F88B03-8203-427C-8D30-74D316CB2164}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sage.Core.Utilities", "..\..\Projects\Sage.Core.Utilities\Sage.Core.Utilities.csproj", "{56D9AD7F-634C-4C7A-BD47-21D4818C4419}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sage.Core.Cache", "..\..\Projects\Sage.Core.Cache\Sage.Core.Cache.csproj", "{FA7E0C48-9FA7-475F-A2A5-EC9C45DD978F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{970C03FE-64FF-48F2-B7C7-46ED8ADF01E1}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sage.Core.Framework", "..\..\Projects\Sage.Core.Framework\Sage.Core.Framework.csproj", "{28A5E2F7-2AE6-4ADE-A94B-3E6AFF0D6779}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F3B286B-F931-40F4-A1D5-3C468A1BB7EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F3B286B-F931-40F4-A1D5-3C468A1BB7EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F3B286B-F931-40F4-A1D5-3C468A1BB7EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F3B286B-F931-40F4-A1D5-3C468A1BB7EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8870C98-A724-4A39-A93C-C8E13CB93165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8870C98-A724-4A39-A93C-C8E13CB93165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8870C98-A724-4A39-A93C-C8E13CB93165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8870C98-A724-4A39-A93C-C8E13CB93165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F735F9E-35E0-4B3A-83AC-C4A91AE0F787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F735F9E-35E0-4B3A-83AC-C4A91AE0F787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F735F9E-35E0-4B3A-83AC-C4A91AE0F787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F735F9E-35E0-4B3A-83AC-C4A91AE0F787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56D9AD7F-634C-4C7A-BD47-21D4818C4419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56D9AD7F-634C-4C7A-BD47-21D4818C4419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56D9AD7F-634C-4C7A-BD47-21D4818C4419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56D9AD7F-634C-4C7A-BD47-21D4818C4419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA7E0C48-9FA7-475F-A2A5-EC9C45DD978F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA7E0C48-9FA7-475F-A2A5-EC9C45DD978F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA7E0C48-9FA7-475F-A2A5-EC9C45DD978F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA7E0C48-9FA7-475F-A2A5-EC9C45DD978F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28A5E2F7-2AE6-4ADE-A94B-3E6AFF0D6779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28A5E2F7-2AE6-4ADE-A94B-3E6AFF0D6779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28A5E2F7-2AE6-4ADE-A94B-3E6AFF0D6779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28A5E2F7-2AE6-4ADE-A94B-3E6AFF0D6779}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{56D9AD7F-634C-4C7A-BD47-21D4818C4419} = {F3F88B03-8203-427C-8D30-74D316CB2164}
+		{FA7E0C48-9FA7-475F-A2A5-EC9C45DD978F} = {F3F88B03-8203-427C-8D30-74D316CB2164}
+		{28A5E2F7-2AE6-4ADE-A94B-3E6AFF0D6779} = {F3F88B03-8203-427C-8D30-74D316CB2164}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.1\lib\NET45
+	EndGlobalSection
+EndGlobal

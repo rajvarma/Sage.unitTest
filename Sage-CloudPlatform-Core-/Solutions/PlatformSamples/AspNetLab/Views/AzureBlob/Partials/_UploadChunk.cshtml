@@ -1,0 +1,88 @@
+﻿
+
+<div id="uploadDialog">
+    <br />
+    <div>
+        Upload a file<br/>
+        <div id="browse-button-container" style="float: left">
+            <button id="selectFiles" title="">Browse... </button>
+        </div>
+        
+    </div>
+    <br />
+ 
+    <form id="uploadForm" enctype="multipart/form-data" method="post">
+        <div id="uploader">
+            <p>Browser not supported.</p>
+        </div>
+    </form>
+    <br />
+    <button type="button" id="UploadFile">Upload</button>
+    
+</div>
+
+<script type="text/javascript">
+    var RedirtctUrl;
+    $(function() {
+        $('#uploader').plupload({
+            // List of runtimes to be used by the plugin. Priority is given based on the order in which the runtimes are specified. 
+            // (i.e., if HTML5 is not supported, it fallsback to Silverlight and then Flash)
+            runtimes: 'html5,silverlight,flash',
+            url: '@Url.Action("UploadChunk", "AzureBlob")',
+            chunk_size: '1mb',
+            // generates unique names for each file, sends it as one of the additional form data
+            unique_names: true,
+            multipart: true,
+            urlstream_upload: true,
+            multi_selection: false,
+            browse_button: 'selectFiles',
+            container: 'browse-button-container', // container div for the custom browse button
+            // Flash settings
+            flash_swf_url: '/Scripts/Plupload/plupload.flash.swf',
+
+            // Silverlight settings
+            silverlight_xap_url: '/Scripts/Plupload/plupload.silverlight.xap',
+         
+            preinit: {
+                // On initialize of the plugin
+                Init: function (up, info) {
+                    $('.plupload_filelist_header').removeClass('ui-widget-header');
+                    $('.plupload_filelist_footer').removeClass('ui-widget-header');
+                    $('#uploader_stop').hide();
+                },
+                QueueChanged: function (up) {
+                    if (up.files.length > 1 && up.state != 2) {
+                        up.removeFile(up.files[0]);
+                        up.refresh(); // must refresh for flash runtime
+                    }
+                },
+                UploadFile: function (up, file) {
+                    up.settings.multipart_params = {
+                        fileName: file.name
+                    };
+                },
+                FileUploaded: function (up, file, info) {
+                    var response = $.parseJSON(info.response);
+                    RedirtctUrl = response.redirectUrl;
+                },
+                UploadComplete: function (up, files) {
+                    if (RedirtctUrl && RedirtctUrl != '') {
+                        window.location = RedirtctUrl;
+                    } else {
+                        window.location.reload();
+                    }
+                }
+            }
+        });
+
+        $('.plupload_filelist').hide();
+        $('.plupload_droptext').hide();
+
+        
+        $('.plupload_header_content').hide();
+        
+        $('#UploadFile').click(function () {
+            $('#uploader_start').click();
+        });
+    });
+</script>

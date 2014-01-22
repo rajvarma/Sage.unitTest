@@ -1,0 +1,9 @@
+﻿.logo {
+    background: url(images/bg-main-b.png) no-repeat;
+    width: 77px;
+    height: 31px;
+    overflow: hidden;
+    text-indent: -9999px;
+    float: right;
+    margin: 0;
+}

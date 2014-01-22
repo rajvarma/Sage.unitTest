@@ -1,0 +1,46 @@
+﻿@using AspNetLab.Helpers
+
+@{
+    ViewBag.Title = "Index";
+     var uniqueFileName = @ViewBag.UniqueFileName;
+     var fileName = @ViewBag.FileName;
+    ViewBag.IsVersion = true;
+}
+@model AspNetLab.Models.VersionModel
+<p><b>Version Blob Test</b></p>
+<div>
+    @Html.Partial("Partials/_UploadFile")
+    @if (ViewBag.IsUploaded == null || !ViewBag.IsUploaded)
+    {
+        if (ViewBag.HasUploadError != null && ViewBag.HasUploadError == true)
+        {
+            @Html.Partial("Partials/_UploadError")
+        }
+        if (ViewBag.IsDeleted != null)
+        {
+            @(ViewBag.IsDeleted == true ? Html.Partial("Partials/_ShowDeleteSuccess") : Html.Partial("Partials/_ShowDeleteError"))
+        }
+    }
+    else if (ViewBag.IsUploaded == true)
+    {
+        @Html.Partial("Partials/_DownloadFile")
+        if (ViewBag.VersionListed != null && ViewBag.VersionListed == true)
+        {
+           @Html.Partial("Partials/_VersionList", Model) 
+        }
+        else
+        {
+            using (Html.BeginForm("GetAllVersions", "AzureBlob"))
+            {
+                <p>Get Version @ViewBag.FileName 
+
+                @Html.Hidden("fileName")
+                @Html.Hidden("uniqueFileName")
+                <input id="GetVersions" type="submit" value="GetVersions" /></p>
+
+            }
+        }  
+    }
+</div>
+
+@Html.MarkDown("VersionBlobStore_Index")

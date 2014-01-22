@@ -1,0 +1,50 @@
+﻿
+@{
+    var uniqueFileName = @ViewBag.UniqueFileName;
+    var fileName = @ViewBag.FileName;
+    var isChunk = (@ViewBag.IsChunkUpload != null && @ViewBag.IsChunkUpload); 
+}
+
+<div>
+    <fieldset>
+        <legend>Latest Version</legend> 
+        @if (isChunk)
+        {
+            using (Html.BeginForm("DownloadChunk", "AzureBlob"))
+            {
+                <p>Download @ViewBag.FileName 
+                    @Html.Hidden("fileName")
+                    @Html.Hidden("uniqueFileName")
+                    <input id="DownloadFile" type="submit" value="Download" /></p>
+            }
+        }
+        else
+        {
+            using (Html.BeginForm("Download", "AzureBlob"))
+            {
+                <p>Download @ViewBag.FileName 
+                    @Html.Hidden("fileName")
+                    @Html.Hidden("uniqueFileName")
+                    <input id="DownloadFile" type="submit" value="Download" /></p>
+            }
+        }
+
+        @using (Html.BeginForm("Delete", "AzureBlob"))
+        {
+            <p>Delete @ViewBag.FileName 
+
+                @Html.Hidden("fileName")
+                @Html.Hidden("uniqueFileName")
+            
+                @Html.Hidden("isChunk", (object)isChunk)
+           
+                <input id="DeleteFile" type="submit" value="Delete" /></p>
+        }
+    </fieldset>
+    
+</div>
+
+
+
+
+
